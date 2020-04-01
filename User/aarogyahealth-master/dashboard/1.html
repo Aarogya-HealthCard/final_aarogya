@@ -1,0 +1,13 @@
+<script>
+    const weightInput = document.getElementById('uweight');
+    const heightInput = document.getElementById('height');
+    const bmiInput = document.getElementById('bmi');    
+    heightInput.addEventListener('input', calculateBMI);
+    weightInput.addEventListener('input', calculateBMI);
+    function calculateBMI () {
+        const height = parseFloat(heightInput.value);
+        const weight = parseFloat(weightInput.value);
+        const bmi = weight / Math.pow(height, 2);
+        bmiInput.value = bmi.toFixed(2);
+    }
+ </script>

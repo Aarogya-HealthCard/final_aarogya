@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<!-- Mirrored from www.ravijaiswal.com/Jais_admin/index.html by HTTrack Website Copier/3.x [XR&CO'2017], Fri, 04 Aug 2017 15:24:40 GMT -->
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard | Aarogya HealthCard</title>
+
+
+    <!--STYLESHEET-->
+    <!--=================================================-->
+
+	
+    <link href="assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+	<link href="assets/css/essentials.css" rel="stylesheet" type="text/css" />
+	<link href="assets/css/layout.css" rel="stylesheet" type="text/css" />
+    <link href="assets/css/jais.css" rel="stylesheet">
+    <link href="assets/css/demo/jais-demo-icons.css" rel="stylesheet">
+    <!-- <link href="assets/css/demo/jais-demo.css" rel="stylesheet"> -->
+
+</head>
+
+<!--TIPS-->
+<!--You may remove all ID or Class names which contain "demo-", they are only used for demonstration. -->
+<body>
+    <div id="container" class="effect aside-float aside-bright">
+        
+        <!--NAVBAR-->
+        <!--===================================================-->
+        <header id="navbar">
+            <div id="navbar-container" class="boxed">
+
+                <!--Brand logo & name-->
+                <!--================================-->
+                
+                <!--================================-->
+                <!--End brand logo & name-->
+
+
+                <!--Navbar Dropdown-->
+                <!--================================-->
+                <div class="navbar-content clearfix">
+              
+                    <ul class="nav navbar-top-links pull-right">
+                        <!--User dropdown-->
+                        <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+                        <li id="dropdown-user" class="dropdown">
+                            <a href="#" data-toggle="dropdown" class="dropdown-toggle text-right">
+                                <span class="pull-right">
+                                    <img class="img-circle img-user media-object" src="assets/images/9.png" alt="Profile Picture">
+                                </span>
+                                <div class="username hidden-xs">Doctor's Name</div>
+                            </a>
+
+
+                            <div class="dropdown-menu dropdown-menu-md dropdown-menu-right panel-default">
+
+                                <!-- Dropdown heading  -->
+                                <div class="pad-all bord-btm">
+                                    <ul class="head-list">
+                                    <li>
+                                        <a href="profile.html">
+                                            <i class="demo-pli-male icon-lg icon-fw"></i> Profile
+                                        </a>
+                                    </li>
+									</ul>
+                                </div>
+
+
+                                <!-- User dropdown menu -->
+                                <ul class="head-list">
+                                   
+                                    <li>
+                                        <a href="#">
+                                            <span class="badge badge-danger pull-right">9</span>
+                                            <i class="demo-pli-mail icon-lg icon-fw"></i> Notifications
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="demo-pli-gear icon-lg icon-fw"></i> Account Settings
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="demo-pli-information icon-lg icon-fw"></i> Help
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="demo-pli-computer-secure icon-lg icon-fw"></i> Feedback
+                                        </a>
+                                    </li>
+                                </ul>
+
+                                <!-- Dropdown footer -->
+                                <div class="pad-all text-right">
+                                    <a href="pages-login.html" class="btn btn-primary">
+                                        <i class="demo-pli-unlock"></i> Logout
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
+                        <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+                        <!--End user dropdown-->
+
+                    </ul>
+                </div>
+                <!--================================-->
+                <!--End Navbar Dropdown-->
+
+            </div>
+        </header>
+        <!--===================================================-->
+        <!--END NAVBAR-->
+
+        <div class="boxed">
+
+            <!--CONTENT CONTAINER-->
+            <!--===================================================-->
+            <div id="content-container">
+                
+                <!--Page Title-->
+                <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+                <div id="page-title">
+                    <h1 class="page-header text-overflow">Your Profile</h1>
+                </div>
+                <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+                <!--End page title-->
+
+                <!--Page content-->
+                <!--===================================================-->
+                
+				<div id="content" class="padding-20">
+
+					<!-- 
+						PANEL CLASSES:
+							panel-default
+							panel-danger
+							panel-warning
+							panel-info
+							panel-success
+
+						INFO: 	panel collapse - stored on user localStorage (handled by app.js _panels() function).
+								All pannels should have an unique ID or the panel collapse status will not be stored!
+					-->
+					<div id="panel-1" class="panel panel-default" >
+						<div class="panel-heading" style="background-color:#3f4079;color: white">
+							<span class="title elipsis">
+								<strong>Basic Information</strong> <!-- panel title -->
+							</span>
+
+						</div>
+
+						<!-- panel content -->
+						<div class="panel-body">
+
+							
+
+				<form id="basicinfo" method="post" enctype="multipart/form-data" action="<?php echo $_SERVER['PHP_SELF']; ?>">
+					<div class="row">
+						<div class="col-md-4">
+							<div class="form-group">
+							
+								<div class="row">
+								<div class="col-md-12">
+									<img class="img-circle img-lg img-border center-block" src="assets/images/2.png" alt="Profile Picture">
+								</div>
+								</div>
+								<div class="row">
+								<div class="col-md-12"><div class="fancy-file-upload fancy-file-info">
+									<i class="fa fa-upload"></i>
+									<input type="file" class="form-control" name="contact[attachment]" onchange="jQuery(this).next('input').val(this.value);" />
+									<input type="text" class="form-control" placeholder="Your Profile Picture" readonly />
+									<span class="button">Choose File</span>
+								</div></div>
+<!--								<div class="col-md-2"><input type="button" name="upload" value="upload"></div>-->
+								
+							</div>
+							</div>
+						</div>
+						<div class="col-md-8">
+							<div class="row" style="margin-top:5px">
+
+								<div class="col-md-6">
+									<div class="form-group">
+										<label>Specialization</label>
+										<select class="form-control" name="speciality" >
+											<option value="Allergist">Allergist (immunologist)</option>
+											<option value="Anesthesiologist">Anesthesiologist</option>
+											<option value="Ayurveda">Ayurveda</option>
+											<option value="Cardiac electrophysiologist">Cardiac electrophysiologist</option>
+											<option value="Cardiologist">Cardiologist</option>
+											<option value="Cardiovascular surgeon">Cardiovascular surgeon</option>
+											<option value="Colon and rectal surgeon">Colon and rectal surgeon</option>
+											<option value="Dentist">Dentist</option>
+											<option value="Dermatologist">Dermatologist</option>
+											<option value="Dietitian/Nutritionist">Dietitian/Nutritionist</option>
+											<option value="Endocrinologist">Endocrinologist</option>
+											<option value="Family medicine physician">Family medicine physician</option>
+											<option value="Forensic pathologist">Forensic pathologist</option>
+											<option value="Gastroenterologist">Gastroenterologist</option>
+											<option value="Gynecologist">Gynecologist</option>
+											<option value="Hand surgeon">Hand surgeon</option>
+											<option value="Hematologist">Hematologist</option>
+											<option value="Hepatologist">Hepatologist</option>
+											<option value="Homoeopathic">Homoeopathic</option>
+											<option value="Hyperbaric physician">Hyperbaric physician</option>
+											<option value="Internist">Internist</option>
+											<option value="Interventional cardiologist">Interventional cardiologist</option>
+											<option value="Medical examiner">Medical examiner</option>
+											<option value="Medical geneticist">Medical geneticist</option>
+											<option value="Neonatologist">Neonatologist</option>
+											<option value="Nephrologist">Nephrologist</option>
+											<option value="Neurological surgeon">Neurological surgeon</option>
+											<option value="Neurologist">Neurologist</option>
+											<option value="Obstetrician">Obstetrician</option>
+											<option value="Oncologist">Oncologist</option>
+											<option value="Ophthalmologist">Ophthalmologist</option>
+											<option value="Oral surgeon">Oral surgeon (maxillofacial surgeon)</option>
+											<option value="Orthopedic surgeon">Orthopedic surgeon</option>
+											<option value="Otolaryngologist">Otolaryngologist (ENT specialist)</option>
+											<option value="Pathologist">Pathologist</option>
+											<option value="Pediatrician">Pediatrician</option>
+											<option value="Perinatologist">Perinatologist</option>
+											<option value="Plastic surgeon">Plastic surgeon</option>
+											<option value="Physiatrist">Physiatrist</option>
+											<option value="Physiotherapist">Physiotherapist</option>
+											<option value="Psychiatrist">Psychiatrist</option>
+											<option value="Pulmonologist">Pulmonologist</option>
+											<option value="Radiation oncologist">Radiation oncologist</option>
+											<option value="Radiologist">Radiologist</option>
+											<option value="Reproductive endocrinologist">Reproductive endocrinologist</option>
+											<option value="Rheumatologist">Rheumatologist</option>
+											<option value="Speech Therapist">Speech Therapist</option>
+											<option value="Spinal cord injury specialist">Spinal cord injury specialist</option>
+											<option value="Surgeon">Surgeon</option>
+											<option value="Thoracic surgeon">Thoracic surgeon</option>
+											<option value="Urologist">Urologist</option>
+											<option value="Vascular surgeon">Vascular surgeon</option>
+										</select>
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="form-group">
+										<label>Years of Experience</label>
+										
+										<input type="number" class="form-control" min="0" placeholder="Enter number of years" name="exp"  >
+									</div>
+								</div>
+							</div>
+							<!-- /row-->
+							<div class="row">
+								<div class="col-md-6">
+									<div class="form-group">
+										<label>Qualification</label>
+										<input type="text" class="form-control" placeholder="Ex: MBBS, MD, MPhil etc." name="qualification" >
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="form-group">
+										<label>Institute name</label>
+										<input type="text" class="form-control" placeholder="Enter the name of Institute where you qualified" name="inst"  >
+									</div>
+								</div>
+							</div>
+							<!-- /row-->
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-6">
+							<div class="form-group">
+								<label>Registration Number</label>
+								<input type="text" class="form-control" placeholder="Enter your registration n.o." name="regno" >
+							</div>
+						</div>
+						<div class="col-md-6">
+							<div class="form-group">
+								<label>Aadhar card Number</label>
+								<input type="text" class="form-control" placeholder="Enter your aadhar n.o." name="aadhar">
+							</div>
+						</div>
+					</div>
+					<!-- /row-->
+					<div class="row">
+						<div class="col-md-6">
+							<div class="form-group">
+							<div class="row">
+							<div class="col-md-8">
+							<label> Degree Certificate</label>
+								</div>
+								</div>
+								<div class="row">
+								<div class="col-md-8">
+									<img height="100">
+								</div>
+								</div>
+								<div class="row">
+								<div class="col-md-8"><div class="fancy-file-upload fancy-file-info">
+									<i class="fa fa-upload"></i>
+									<input type="file" class="form-control" name="contact[attachment]" onchange="jQuery(this).next('input').val(this.value);" />
+									<input type="text" class="form-control" placeholder="no file selected" readonly />
+									<span class="button">Choose File</span>
+								</div></div>
+<!--								<div class="col-md-2"><input type="button" name="upload" value="upload"></div>-->
+								
+							</div>
+							</div>
+						</div>
+						<div class="col-md-6">
+							<div class="form-group">
+								<label>Professional statement <small class="text-muted">- optional</small></label>
+								<textarea class="form-control" style="height:180px;" placeholder="Write a description about yourself" name="about"></textarea>
+							</div>
+						</div>
+					</div>
+					<div align="center">
+					<input type="submit" value="Save" name="save1" id="save1" class="btn btn-primary" style="border-radius:5em;padding-left: 5em;padding-right:5em"></div>
+					<!-- /row-->
+				</form>
+			
+			<!-- /box_general-->
+						</div>
+					</div>
+					<div id="panel-2" class="panel panel-default" >
+					<div class="panel-heading" style="background-color:#3f4079;color: white">
+							<span class="title elipsis">
+								<strong>Clinic Details</strong> <!-- panel title -->
+							</span>
+
+						</div>
+
+						<!-- panel content -->
+						<div class="panel-body">
+			
+					<form method="post" id="clinicinfo"  action="<?php echo $_SERVER['PHP_SELF']; ?>">
+					<div class="row">
+						<div class="col-md-6">
+							<div class="form-group">
+								<label>Enquiry Number<small class="text-muted">- optional</small></label>
+								<input type="text" name="enqno" class="form-control" placeholder="Telephone or Mobile N.o">
+							</div>
+						</div>
+						<div class="col-md-6">
+							<div class="form-group">
+								<label>Clinic/Hospital Name</label>
+								<input type="text" name="clinic_name" class="form-control" placeholder="Name of your Clinic/Hospital" >
+							</div>
+						</div>
+					</div>
+					<!-- /row-->
+					<div class="row">
+						<div class="col-md-12">
+							<div class="form-group">
+								<label>Street Address</label>
+								<input type="text" name="str_addr" class="form-control" placeholder="Enter address" >
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-4">
+							<div class="form-group">
+								<label>Area/Locality</label>
+								<input type="text" name="area" class="form-control" placeholder="Enter Area" >
+							</div>
+						</div>
+						<div class="col-md-4">
+							<div class="form-group">
+								<label>City</label>
+								<select class="form-control" name="city">
+									<option value="Rajkot">Rajkot</option>
+								</select>
+							</div>
+						</div>
+						<div class="col-md-4">
+							<div class="form-group">
+								<label>Zip code</label>
+								<input type="text" name="zipcode" class="form-control" placeholder="Your zip code" >
+							</div>
+						</div>
+					</div>
+					<!-- /row-->
+						<div align="center"><input type="submit" value="Save" name="save2" class="btn btn-primary" style="border-radius:5em;padding-left: 5em;padding-right:5em"></div>
+				</form>
+			
+			<!-- /box_general-->
+
+						</div>
+						<!-- /panel content -->
+
+						
+					</div>
+					<!-- /PANEL -->
+
+
+
+
+				</div>
+                <!--===================================================-->
+                <!--End page content-->
+
+
+            </div>
+            <!--===================================================-->
+            <!--END CONTENT CONTAINER-->
+
+
+            
+            
+            
+            <!--MAIN NAVIGATION-->
+            <!--===================================================-->
+            
+        <!-- FOOTER -->
+        <!--===================================================-->
+        <footer id="footer">
+
+            
+
+            <p class="pad-lft">&#0169; 2020 Copyright Aarogya HealthCard</p>
+
+
+
+        </footer>
+        <!--===================================================-->
+        <!-- END FOOTER -->
+
+
+        <!-- SCROLL PAGE BUTTON -->
+        <!--===================================================-->
+        <button class="scroll-top btn">
+            <i class="pci-chevron chevron-up"></i>
+        </button>
+        <!--===================================================-->
+
+
+	
+    
+    <!--===================================================-->
+    <!-- END OF CONTAINER -->
+
+
+		</div>
+	</div>
+    <!--JAVASCRIPT-->
+    <!--=================================================-->
+    <script src="assets/plugins/jquery/jquery-2.1.4.min.js"></script>
+    <script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+	<script type="text/javascript">var plugin_path = 'assets/plugins/index.html';</script>
+	<script src="assets/js/app.js"></script>
+    <script src="assets/js/jais.js"></script>
+    <script src="assets/js/demo/jais-demo.min.js"></script>
+
+</body>
+
+<!-- Mirrored from www.ravijaiswal.com/Jais_admin/index.html by HTTrack Website Copier/3.x [XR&CO'2017], Fri, 04 Aug 2017 15:25:58 GMT -->
+</html>
